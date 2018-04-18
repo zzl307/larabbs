@@ -14,3 +14,6 @@
 Route::get('/', 'PagesController@root')->name('root');
 
 Auth::routes();
+
+// 个人页面
+Route::resource('users', 'UsersController', ['only' => ['show', 'update', 'edit']]);
